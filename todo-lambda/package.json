@@ -1,0 +1,21 @@
+{
+  "name": "todo-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "getlist": "lambda-local -l app.js -e getListRequest.json -E '{\"action\":\"GetTodoList\"}'",
+    "add": "lambda-local -l app.js -e addRequest.json -E '{\"action\":\"AddTodo\"}'",
+    "update": "lambda-local -l app.js -e updateRequest.json -E '{\"action\":\"UpdateTodo\"}'",
+    "get": "lambda-local -l app.js -e getRequest.json -E '{\"action\":\"GetTodo\"}'",
+    "delete": "lambda-local -l app.js -e deleteRequest.json -E '{\"action\":\"DeleteTodo\"}'",
+    "zipit": "zip -r archive.zip node_modules/ handlers/ app.js package.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "mongodb": "^3.2.7"
+  }
+}

@@ -1,0 +1,6 @@
+npm run zipit
+aws lambda update-function-code --function-name todoGetItems --zip-file fileb://./archive.zip
+aws lambda update-function-code --function-name todoGet --zip-file fileb://./archive.zip
+aws lambda update-function-code --function-name todoAdd --zip-file fileb://./archive.zip
+aws lambda update-function-code --function-name todoUpdate --zip-file fileb://./archive.zip
+aws lambda update-function-code --function-name todoDelete --zip-file fileb://./archive.zip
